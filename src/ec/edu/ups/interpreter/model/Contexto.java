@@ -1,5 +1,10 @@
 package ec.edu.ups.interpreter.model;
 
+/**
+ * 
+ * @author Grupo 3
+ *
+ */
 public class Contexto {
 
 	private String siquienteOperacion = "";
