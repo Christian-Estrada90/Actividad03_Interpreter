@@ -1,5 +1,7 @@
 package ec.edu.ups.interpreter.model;
 
+import ec.edu.ups.interpreter.controller.ContextoController;
+
 /**
  * 
  * @author Grupo 3
@@ -14,7 +16,7 @@ public class OperadorExpresion implements IExpression {
 	}
 
 	@Override
-	public void interpret(Contexto contexto) {
+	public void interpret(ContextoController contexto) {
 		contexto.setOperacion(this.operacion);
 		contexto.realizaOperacion();
 	}

@@ -1,11 +1,11 @@
-package ec.edu.ups.interpreter.model;
+package ec.edu.ups.interpreter.controller;
 
 /**
  * 
  * @author Grupo 3
  *
  */
-public class Contexto {
+public class ContextoController {
 
 	private String siquienteOperacion = "";
 

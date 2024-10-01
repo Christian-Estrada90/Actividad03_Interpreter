@@ -3,6 +3,8 @@ package ec.edu.ups.interpreter.model;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import ec.edu.ups.interpreter.controller.ContextoController;
+
 /**
  * 
  * @author Grupo 3
@@ -11,7 +13,7 @@ import java.util.Scanner;
 public class main {
 
 	public static void main(String[] args) {
-		Contexto contexto = new Contexto();
+		ContextoController contexto = new ContextoController();
 		Scanner lectura = new Scanner(System.in);
 		
 		// Creamos el arbol de expresiones y el contexto

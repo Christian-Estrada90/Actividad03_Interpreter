@@ -1,5 +1,7 @@
 package ec.edu.ups.interpreter.model;
 
+import ec.edu.ups.interpreter.controller.ContextoController;
+
 /**
  * 
  * @author Grupo 3
@@ -7,5 +9,5 @@ package ec.edu.ups.interpreter.model;
  */
 public interface IExpression {
 
-	public abstract void interpret(Contexto contexto);
+	public abstract void interpret(ContextoController contexto);
 }

@@ -1,6 +1,6 @@
 package ec.edu.ups.interpreter.view;
 
-import ec.edu.ups.interpreter.model.Contexto;
+import ec.edu.ups.interpreter.controller.ContextoController;
 import ec.edu.ups.interpreter.model.IExpression;
 import ec.edu.ups.interpreter.model.NumeroExpresion;
 import ec.edu.ups.interpreter.model.OperadorExpresion;
@@ -40,6 +40,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btn_salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_salirActionPerformed(evt);
+            }
+        });
+        
+        txt_expresion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                char c = evt.getKeyChar();
+                // Si el carácter no es una letra y no es un carácter de control (como backspace) y caracter (espacio)
+                if (!Character.isLetter(c) && 
+                		!Character.isWhitespace(c) && 
+                		!Character.isISOControl(c)) {
+                    evt.consume(); // Ignorar la entrada
+                }
             }
         });
 
@@ -85,7 +97,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         String dato[];
         String val = txt_expresion.getText();
         dato = val.split(" ");
-        Contexto contexto = new Contexto();
+        ContextoController contexto = new ContextoController();
 
         // Añadimos los tokens pasados como argumentos
         for (String token : dato) {
