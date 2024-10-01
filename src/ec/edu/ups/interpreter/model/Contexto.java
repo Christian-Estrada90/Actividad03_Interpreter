@@ -50,6 +50,8 @@ public class Contexto {
 			this.result += operator;
 		else if (this.nextOp.toLowerCase().equals("-"))
 			this.result -= operator;
+		
+		operator = 0;
 	}
 
 	public int getResult() {
